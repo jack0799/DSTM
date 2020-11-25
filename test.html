@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>  
+<html>
+<head>
+<style>
+.error {color: #FF0000;}
+</style>
+</head>
+<body>  
+
+
+
+Inv id
+pro cod
+pro name
+pro cat
+pro desc 
+quan
+price 
+sell name
+sell address
+imported yes no 
+cont name 
+ship num
+<h2>Inventory Management</h2>
+<p><span class="error">* required field</span></p>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>
+  Inventory ID: <input type="text" name="id" >
+  <span class="error">* <?php echo $iderror;?></span>
+  <br><br>
+  Product Code: <input type="text" name="cod" >
+  <span class="error">* <?php echo $coderror;?></span>
+  <br><br>
+  Product Name: <input type="text" name="name" >
+  <span class="error">* <?php echo $nameErr;?></span>
+  <br><br>
+  Product Category: <input type="text" name="cat" >
+  <span class="error">* <?php echo $caterror;?></span>
+  <br><br>
+  Description: <textarea name="comment" rows="5" cols="40"></textarea>
+  <br><br>
+  Quantity: <input type="number" name="quan" >
+  <span class="error">* <?php echo $quanerror;?></span>
+  <br><br>
+  Price: <input type="number" name="price" >
+  <span class="error">* <?php echo $priceerror;?></span>
+  <br><br>
+  Seller Name: <input type="text" name="sname" >
+  <span class="error">* <?php echo $snameErr;?></span>
+  <br><br>
+  Seller Address: <input type="text" name="sell" >
+  <span class="error">* <?php echo $sellerror;?></span>
+  <br><br>
+  Gender:
+  <input type="radio" name="yesno" > yes
+  <input type="radio" name="yesno" > no
+  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?> value="other">Other  
+  <span class="error">* <?php echo $genderErr;?></span>
+  <br><br>
+  <input type="submit" name="submit" value="Submit">  
+</form>
+
+
+
+</body>
+</html>
