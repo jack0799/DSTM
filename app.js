@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const port = process.env.port || 5000;
 //const bodyParser = require('body-parser');
 require('dotenv/config');
 
@@ -27,4 +28,4 @@ mongoose.connect(process.env.DB,
 );
 
 //server
-app.listen(5000);
+app.listen(port);
