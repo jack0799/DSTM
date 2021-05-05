@@ -12,19 +12,25 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
     console.log(req.body);
     const post = new Post({
         name: req.body.name,
         title: req.body.title,
         desc: req.body.desc
     });
-    post.save().then(data => {
-        res.json(data);
-    }).catch(err => {
-        console.log(err);
+    try {
+        const savedPost = await post.save();
+        res.json(savedPost);
+    } catch (err) {
         res.json({ message: err });
-    });
+    }
+    // post.save().then(data => {
+    //     res.json(data);
+    // }).catch(err => {
+    //     console.log(err);
+    //     res.json({ message: err });
+    // });
 });
 
 module.exports = router;
