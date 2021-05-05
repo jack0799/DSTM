@@ -3,7 +3,7 @@ const router = express.Router();
 const Post = require('../models/Post');
 
 router.get('/', async (req, res) => {
-    //res.send('Post');
+    res.send('Post');
     try {
         const posts = await Post.find();
         res.json(posts);
