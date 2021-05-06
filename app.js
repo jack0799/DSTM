@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
 app.use('/post', postRoutes);
 
 //db connection
-mongoose.connect(process.env.DB,
+mongoose.connect(process.env.MONGOHQ_URL,
     { useNewUrlParser: true, useUnifiedTopology: true },
     () => console.log('Connected')
 );
