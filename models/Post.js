@@ -12,13 +12,13 @@ const postSchemacc = mongoose.Schema({
     Buck_Output_Voltage: String
 });
 const postSchemasscb = mongoose.Schema({
-    name: String,
-    title: String,
-    desc: String,
-    desc: String,
-    desc: String,
-    desc: String,
-    desc: String
+    SSCB_Id: String,
+    SSCB_Status: String,
+    Input_Current: String,
+    Output_Current: String,
+    Output_Energy: String,
+    Output_Power: String,
+    Output_Voltage: String
 });
 
 //module.exports = mongoose.model('Posts', postSchema);

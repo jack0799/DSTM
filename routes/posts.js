@@ -25,13 +25,13 @@ router.post('/', async (req, res) => {
         Buck_Output_Voltage: req.body.payload_fields.Buck_Output_Voltage
     });
     const post1 = new SSCB({
-        name: req.body.payload_fields.SSCB_Id,
-        title: req.body.payload_fields.SSCB_Status,
-        desc: req.body.payload_fields.Input_Current,
-        desc: req.body.payload_fields.Output_Current,
-        desc: req.body.payload_fields.Output_Energy,
-        desc: req.body.payload_fields.Output_Power,
-        desc: req.body.payload_fields.Output_Voltage
+        SSCB_Id: req.body.payload_fields.SSCB_Id,
+        SSCB_Status: req.body.payload_fields.SSCB_Status,
+        Input_Current: req.body.payload_fields.Input_Current,
+        Output_Current: req.body.payload_fields.Output_Current,
+        Output_Energy: req.body.payload_fields.Output_Energy,
+        Output_Power: req.body.payload_fields.Output_Power,
+        Output_Voltage: req.body.payload_fields.Output_Voltage
     });
     if (req.body.counter % 4 == 0) {
         try {
