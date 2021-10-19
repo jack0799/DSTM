@@ -35,23 +35,27 @@ router.post('/', async (req, res) => {
         Output_Voltage: req.body.uplink_message.decoded_payload.Output_Voltage
     });
     if (req.body.uplink_message.f_port == 1) {
-        console.log(req.body.uplink_message.decoded_payload.Charge_Controller_Id);
+
         try {
             const savedPost = await post.save();
             res.json(savedPost);
+            console.log(req.body.uplink_message.decoded_payload.Charge_Controller_Id);
         } catch (err) {
+            console.log("error");
             res.json({ message: err });
         }
 
 
     }
     else {
-        console.log(req.body.uplink_message.decoded_payload.SSCB_Id);
+
 
         try {
             const savedPost = await post1.save();
             res.json(savedPost);
+            console.log(req.body.uplink_message.decoded_payload.SSCB_Id);
         } catch (err) {
+            console.log("error");
             res.json({ message: err });
         }
 
