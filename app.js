@@ -19,7 +19,7 @@ app.use('/post', postRoutes);
 
 //routes
 app.get('/', (req, res) => {
-    res.send('Homepage');
+    res.send('Homepage1');
 });
 
 app.use('/post', postRoutes);
