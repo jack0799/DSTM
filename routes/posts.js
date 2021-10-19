@@ -13,7 +13,8 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-    console.log(req.body);
+    console.log(req.body.uplink_message.f_port);
+
     const post = new CC({
         Charge_Controller_Id: req.body.uplink_message.decoded_payload.Charge_Controller_Id,
         Charge_Controller_Status: req.body.uplink_message.decoded_payload.Charge_Controller_Status,
