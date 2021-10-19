@@ -25,7 +25,7 @@ router.post('/', async (req, res) => {
         Buck_Output_Voltage: req.body.uplink_message.decoded_payload.Buck_Output_Voltage
     });
     const post1 = new SSCB({
-        SSCB_Id: req.body.uplink_message.decoded_payload.SSCB_Id,
+        SSCB_Id: req.body.uplink_message.decoded_payload,
         SSCB_Status: req.body.uplink_message.decoded_payload.SSCB_Status,
         Input_Current: req.body.uplink_message.decoded_payload.Input_Current,
         Output_Current: req.body.uplink_message.decoded_payload.Output_Current,
