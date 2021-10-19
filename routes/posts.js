@@ -33,7 +33,7 @@ router.post('/', async (req, res) => {
         Output_Power: req.body.uplink_message.decoded_payload.Output_Power,
         Output_Voltage: req.body.uplink_message.decoded_payload.Output_Voltage
     });
-    if (req.body.uplink_message.Fport == 1) {
+    if (req.body.uplink_message.f_port == 1) {
         try {
             const savedPost = await post.save();
             res.json(savedPost);
