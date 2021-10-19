@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-
+    console.log(req.body);
 
     const post = new CC({
         Charge_Controller_Id: req.body.uplink_message.decoded_payload.Charge_Controller_Id,
