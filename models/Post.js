@@ -2,23 +2,23 @@ const mongoose = require('mongoose');
 const { stringify } = require('querystring');
 
 const postSchemacc = mongoose.Schema({
-    Charge_Controller_Id: Number,
-    Charge_Controller_Status: Number,
-    Solar_Input_Current: Number,
-    Solar_Input_Power: Number,
-    Solar_Input_Voltage: Number,
-    Battery_Load_Current: Number,
-    Battery_Load_Power: Number,
-    Buck_Output_Voltage: Number
+    Charge_Controller_Id: String,
+    Charge_Controller_Status: String,
+    Solar_Input_Current: String,
+    Solar_Input_Power: String,
+    Solar_Input_Voltage: String,
+    Battery_Load_Current: String,
+    Battery_Load_Power: String,
+    Buck_Output_Voltage: String
 });
 const postSchemasscb = mongoose.Schema({
-    SSCB_Id: Number,
-    SSCB_Status: Number,
-    Input_Current: Number,
-    Output_Current: Number,
-    Output_Energy: Number,
-    Output_Power: Number,
-    Output_Voltage: Number
+    SSCB_Id: String,
+    SSCB_Status: String,
+    Input_Current: String,
+    Output_Current: String,
+    Output_Energy: String,
+    Output_Power: String,
+    Output_Voltage: String
 });
 
 //module.exports = mongoose.model('Posts', postSchema);
