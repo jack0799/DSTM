@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-    console.log(req.body.uplink_message.f_port);
+
 
     const post = new CC({
         Charge_Controller_Id: req.body.uplink_message.decoded_payload.Charge_Controller_Id,
@@ -35,6 +35,7 @@ router.post('/', async (req, res) => {
         Output_Voltage: req.body.uplink_message.decoded_payload.Output_Voltage
     });
     if (req.body.uplink_message.f_port == 1) {
+        console.log(req.body.uplink_message.f_port);
         try {
             const savedPost = await post.save();
             res.json(savedPost);
@@ -45,6 +46,7 @@ router.post('/', async (req, res) => {
 
     }
     else {
+        console.log(req.body.uplink_message.f_port);
 
         try {
             const savedPost = await post1.save();
