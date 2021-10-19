@@ -41,7 +41,7 @@ router.post('/', async (req, res) => {
             res.json(savedPost);
             console.log(req.body.uplink_message.decoded_payload.Charge_Controller_Id);
         } catch (err) {
-            console.log("error");
+            console.log(err);
             res.json({ message: err });
         }
 
@@ -55,7 +55,7 @@ router.post('/', async (req, res) => {
             res.json(savedPost);
             console.log(req.body.uplink_message.decoded_payload.SSCB_Id);
         } catch (err) {
-            console.log("error");
+            console.log(err);
             res.json({ message: err });
         }
 
