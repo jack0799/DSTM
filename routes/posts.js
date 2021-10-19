@@ -33,7 +33,7 @@ router.post('/', async (req, res) => {
         Output_Power: req.body.payload_fields.Output_Power,
         Output_Voltage: req.body.payload_fields.Output_Voltage
     });
-    if (req.body.counter % 4 == 0) {
+    if (req.body.FPort == 1) {
         try {
             const savedPost = await post.save();
             res.json(savedPost);
