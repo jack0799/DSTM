@@ -26,7 +26,7 @@ router.post('/', async (req, res) => {
         Buck_Output_Voltage: req.body.uplink_message.decoded_payload.Buck_Output_Voltage
     });
     const post1 = new SSCB({
-        SSCB_Id: req.body.uplink_message.decoded_payload,
+        SSCB_Id: req.body.uplink_message.decoded_payload.SSCB_Id,
         SSCB_Status: req.body.uplink_message.decoded_payload.SSCB_Status,
         Input_Current: req.body.uplink_message.decoded_payload.Input_Current,
         Output_Current: req.body.uplink_message.decoded_payload.Output_Current,
@@ -35,7 +35,7 @@ router.post('/', async (req, res) => {
         Output_Voltage: req.body.uplink_message.decoded_payload.Output_Voltage
     });
     if (req.body.uplink_message.f_port == 1) {
-        console.log(req.body.uplink_message.f_port);
+        console.log(req.body.uplink_message.decoded_payload.Charge_Controller_Id);
         try {
             const savedPost = await post.save();
             res.json(savedPost);
@@ -46,7 +46,7 @@ router.post('/', async (req, res) => {
 
     }
     else {
-        console.log(req.body.uplink_message.f_port);
+        console.log(req.body.uplink_message.decoded_payload.SSCB_Id);
 
         try {
             const savedPost = await post1.save();
