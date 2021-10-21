@@ -359,7 +359,7 @@ router.post('/', async (req, res) => {
             }
 
         }
-        else if (rreq.body.end_device_ids.device_id == 'cluster-a5') {
+        else if (req.body.end_device_ids.device_id == 'cluster-a5') {
             try {
                 const savedPost = await sscb5.save();
                 res.json(savedPost);
