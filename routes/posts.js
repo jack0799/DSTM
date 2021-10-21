@@ -139,7 +139,7 @@ router.post('/', async (req, res) => {
     });
 
 
-    const sscb1 = new SSCB({
+    const sscb1 = new sscba1({
         SSCB_Id: req.body.uplink_message.decoded_payload.SSCB_Id,
         SSCB_Status: req.body.uplink_message.decoded_payload.SSCB_Status,
         Input_Current: req.body.uplink_message.decoded_payload.Input_Current,
@@ -152,7 +152,7 @@ router.post('/', async (req, res) => {
         F_cnt: req.body.uplink_message.f_cnt,
         Time: req.body.received_at
     });
-    const sscb2 = new SSCB({
+    const sscb2 = new sscba2({
         SSCB_Id: req.body.uplink_message.decoded_payload.SSCB_Id,
         SSCB_Status: req.body.uplink_message.decoded_payload.SSCB_Status,
         Input_Current: req.body.uplink_message.decoded_payload.Input_Current,
@@ -165,7 +165,7 @@ router.post('/', async (req, res) => {
         F_cnt: req.body.uplink_message.f_cnt,
         Time: req.body.received_at
     });
-    const sscb3 = new SSCB({
+    const sscb3 = new sscba3({
         SSCB_Id: req.body.uplink_message.decoded_payload.SSCB_Id,
         SSCB_Status: req.body.uplink_message.decoded_payload.SSCB_Status,
         Input_Current: req.body.uplink_message.decoded_payload.Input_Current,
@@ -178,7 +178,7 @@ router.post('/', async (req, res) => {
         F_cnt: req.body.uplink_message.f_cnt,
         Time: req.body.received_at
     });
-    const sscb4 = new SSCB({
+    const sscb4 = new sscba4({
         SSCB_Id: req.body.uplink_message.decoded_payload.SSCB_Id,
         SSCB_Status: req.body.uplink_message.decoded_payload.SSCB_Status,
         Input_Current: req.body.uplink_message.decoded_payload.Input_Current,
@@ -191,7 +191,7 @@ router.post('/', async (req, res) => {
         F_cnt: req.body.uplink_message.f_cnt,
         Time: req.body.received_at
     });
-    const sscb5 = new SSCB({
+    const sscb5 = new sscba5({
         SSCB_Id: req.body.uplink_message.decoded_payload.SSCB_Id,
         SSCB_Status: req.body.uplink_message.decoded_payload.SSCB_Status,
         Input_Current: req.body.uplink_message.decoded_payload.Input_Current,
@@ -204,7 +204,7 @@ router.post('/', async (req, res) => {
         F_cnt: req.body.uplink_message.f_cnt,
         Time: req.body.received_at
     });
-    const sscb6 = new SSCB({
+    const sscb6 = new sscba6({
         SSCB_Id: req.body.uplink_message.decoded_payload.SSCB_Id,
         SSCB_Status: req.body.uplink_message.decoded_payload.SSCB_Status,
         Input_Current: req.body.uplink_message.decoded_payload.Input_Current,
