@@ -229,7 +229,7 @@ router.post('/', async (req, res) => {
 
     if (req.body.uplink_message.f_port == 1) {
 
-        if (req.body.uplink_message.end_device_ids == 'cluster-a1') {
+        if (req.body.end_device_ids.device_id == 'cluster-a1') {
             try {
                 const savedPost = await cc1.save();
                 res.json(savedPost);
@@ -240,7 +240,8 @@ router.post('/', async (req, res) => {
             }
 
         }
-        else if (req.body.uplink_message.end_device_ids == 'cluster-a2') {
+        else if (req.body.end_device_ids.device_id == 'cluster-a2') {
+            console.log("roshan");
             try {
                 const savedPost = await cc2.save();
                 res.json(savedPost);
@@ -251,7 +252,7 @@ router.post('/', async (req, res) => {
             }
 
         }
-        else if (req.body.uplink_message.end_device_ids == 'cluster-a3') {
+        else if (req.body.end_device_ids.device_id == 'cluster-a3') {
             try {
                 const savedPost = await cc3.save();
                 res.json(savedPost);
@@ -262,7 +263,7 @@ router.post('/', async (req, res) => {
             }
 
         }
-        else if (req.body.uplink_message.end_device_ids == 'cluster-a4') {
+        else if (req.body.end_device_ids.device_id == 'cluster-a4') {
             try {
                 const savedPost = await cc4.save();
                 res.json(savedPost);
@@ -273,7 +274,7 @@ router.post('/', async (req, res) => {
             }
 
         }
-        else if (req.body.uplink_message.end_device_ids == 'cluster-a5') {
+        else if (req.body.end_device_ids.device_id == 'cluster-a5') {
             try {
                 const savedPost = await cc5.save();
                 res.json(savedPost);
@@ -284,7 +285,7 @@ router.post('/', async (req, res) => {
             }
 
         }
-        else if (req.body.uplink_message.end_device_ids == 'cluster-a6') {
+        else if (req.body.end_device_ids.device_id == 'cluster-a6') {
             try {
                 const savedPost = await cc6.save();
                 res.json(savedPost);
@@ -311,7 +312,9 @@ router.post('/', async (req, res) => {
     }
     else {
 
-        if (req.body.uplink_message.end_device_ids == 'cluster-a1') {
+
+        if (req.body.end_device_ids.device_id == 'cluster-a1') {
+            //console.log("ross");
             try {
                 const savedPost = await sscb1.save();
                 res.json(savedPost);
@@ -322,7 +325,8 @@ router.post('/', async (req, res) => {
             }
 
         }
-        else if (req.body.uplink_message.end_device_ids == 'cluster-a2') {
+        else if (req.body.end_device_ids.device_id == "cluster-a2") {
+            //onsole.log("roshan2");
             try {
                 const savedPost = await sscb2.save();
                 res.json(savedPost);
@@ -333,7 +337,7 @@ router.post('/', async (req, res) => {
             }
 
         }
-        else if (req.body.uplink_message.end_device_ids == 'cluster-a3') {
+        else if (req.body.end_device_ids.device_id == 'cluster-a3') {
             try {
                 const savedPost = await sscb3.save();
                 res.json(savedPost);
@@ -344,7 +348,7 @@ router.post('/', async (req, res) => {
             }
 
         }
-        else if (req.body.uplink_message.end_device_ids == 'cluster-a4') {
+        else if (req.body.end_device_ids.device_id == 'cluster-a4') {
             try {
                 const savedPost = await sscb4.save();
                 res.json(savedPost);
@@ -355,7 +359,7 @@ router.post('/', async (req, res) => {
             }
 
         }
-        else if (req.body.uplink_message.end_device_ids == 'cluster-a5') {
+        else if (rreq.body.end_device_ids.device_id == 'cluster-a5') {
             try {
                 const savedPost = await sscb5.save();
                 res.json(savedPost);
@@ -366,7 +370,7 @@ router.post('/', async (req, res) => {
             }
 
         }
-        else if (req.body.uplink_message.end_device_ids == 'cluster-a6') {
+        else if (req.body.end_device_ids.device_id == 'cluster-a6') {
             try {
                 const savedPost = await sscb6.save();
                 res.json(savedPost);
